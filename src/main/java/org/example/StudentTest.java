@@ -51,6 +51,7 @@ public class StudentTest implements Comparator<Student>{
         for (Student st : lst) {
             l.log(Level.INFO ,() ->st.getname()+ "\t" +st.getgpa());
 
+
         }
     }
 }
