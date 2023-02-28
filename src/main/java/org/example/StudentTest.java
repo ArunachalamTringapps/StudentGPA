@@ -4,36 +4,13 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.logging.*;
 
-class Student {
-    private final String name;
-    private final int age;
-    private final Double gpa;
 
-    Student(String name, int age, Double gpa) {
-        this.name = name;
-        this.age = age;
-        this.gpa = gpa;
-    }
-
-    public String getname() {
-        return name;
-    }
-
-    public int getage() {
-        return age;
-    }
-
-    public Double getgpa() {
-        return gpa;
-    }
-
-}
 public class StudentTest implements Comparator<Student>{
     public int compare(Student a,Student b){
         return b.getgpa().compareTo(a.getgpa());
     }
     public static void main(String[] args) {
-        Logger l= Logger.getLogger("com.api.jar");
+        Logger l= Logger.getLogger(StudentTest.class.getName());
         Student s1 = new Student("arun", 20, 4.0);
         Student s2 = new Student("vino", 20, 3.5);
         Student s3 = new Student("bala", 20, 4.5);
